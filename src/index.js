@@ -10,17 +10,30 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(newTask.value)
     console.log(tasks)
     //create li
-    let node = document.createElement('li');
     //set li text to newTask.value
-    let li = newTask.value
+    let li = document.createElement("li");
+    tasks.appendChild(li);
+    li.innerHTML = newTask.value;
 
-    
-    //create button <button data-description="shower">X</button>
-    //set button text to X 
-    // set data-description to newTask.value
-    // add button to li
+    let btn = document.createElement("button");
+    btn.innerHTML = "X";
+    btn.dataset.description = newTask.value
+    btn.addEventListener('click', function (evt) {
+    console.log(li)
+    li.remove();
+    }) 
+    li.appendChild(btn)
 
-    //add li to "tasks"
+  
   })
-});
+
+
+  //create button <button data-description="shower">X</button>
+  //set button text to X 
+  // set data-description to newTask.value
+  // add button to li
+
+  //add li to "tasks"
+})
+
 // document.getElementById('textbox_id').value
