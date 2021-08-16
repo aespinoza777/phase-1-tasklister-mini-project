@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let createTask = document.getElementById("create-task-form");
   let newTask = document.getElementById("new-task-description");
-  let newTaskPriority = document.getElementById("new-task-priority");
   let tasks = document.getElementById("tasks")
 
   createTask.addEventListener('submit', function (evt) {
