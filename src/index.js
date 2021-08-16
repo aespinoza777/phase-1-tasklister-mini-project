@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //create li
     let node = document.createElement('li');
     //set li text to newTask.value
+    let li = newTask.value
 
     
     //create button <button data-description="shower">X</button>
